@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(145deg, #1e3c72, #2a5298);
+      overflow: hidden;
+    }
+
+    /* Main Container */
+    .welcome-container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      width: 90%;
+      max-width: 600px;
+    }
+
+    /* Heading */
+    .welcome-container h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #ffd700; /* Gold color to give a royal touch */
+      font-weight: bold;
+    }
+
+    /* Subtext */
+    .welcome-container p {
+      font-size: 1.3rem;
+      margin: 10px 0 20px 0;
+      line-height: 1.6;
+      color: #eaeaea;
+    }
+
+    /* Animated Lines (Decorative) */
+    .line {
+      display: block;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.3);
+      margin: 20px auto;
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .line::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      background: #ffd700;
+      width: 0;
+      animation: animateLine 2s ease-in-out forwards;
+    }
+
+    @keyframes animateLine {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Button Styling */
+    .enter-btn {
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      background: linear-gradient(145deg, #ff4500, #e63946);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .enter-btn:hover {
+      transform: scale(1.1);
+      background: linear-gradient(145deg, #e63946, #ff4500);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Background Particles */
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .particles div {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      animation: moveParticles 8s linear infinite;
+    }
+
+    .particles div:nth-child(odd) {
+      animation-delay: 4s;
+      animation-duration: 6s;
+    }
+
+    @keyframes moveParticles {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      100% {
+        transform: translateY(120vh) translateX(calc(100vw - 50%));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-container">
+    <h1>Welcome to the Suicidal Ideation Detection App</h1>
+    <span class="line"></span>
+    <p>
+      This app uses Machine Learning to understand tweets and identify if someone might need help. 
+      Our goal is to make social media a safe and supportive space for everyone.
+    </p>
+    <p>Take a step toward mental well-being.</p>
+    <button class="enter-btn" onclick="window.location.href='index.html';">Enter the App</button>
+  </div>
+
+ <!-- Background Particles -->
+<div class="particles">
+    <!-- Add as many particles as needed -->
+    <div style="top: 10%; left: 20%;"></div>
+    <div style="top: 25%; left: 70%;"></div>
+    <div style="top: 40%; left: 30%;"></div>
+    <div style="top: 55%; left: 80%;"></div>
+    <div style="top: 70%; left: 15%;"></div>
+    <div style="top: 85%; left: 50%;"></div>
+    <div style="top: 5%; left: 90%;"></div>
+    <div style="top: 50%; left: 5%;"></div>
+    <div style="top: 75%; left: 40%;"></div>
+    <div style="top: 95%; left: 65%;"></div>
+  </div>  
+</body>
+</html>

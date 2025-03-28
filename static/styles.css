@@ -1,0 +1,488 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #12171D;
+  color: #EAEAEA;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #1C2938;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border-right: 1px solid #2F3D4A;
+}
+
+.sidebar .logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #1DA1F2;
+}
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar ul li {
+  padding: 15px 0;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+  color: #1DA1F2;
+}
+
+.sidebar .sidebar-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sidebar .sidebar-btn:hover {
+  background-color: #0d95e8;
+  color: white;
+}
+
+.sidebar .motivational-widget {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1C2938;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.sidebar .motivational-widget h4 {
+  color: #1DA1F2;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sidebar .motivational-widget p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.sidebar .motivational-widget .help-link {
+  text-decoration: none;
+  color: #EAEAEA;
+  font-size: 14px;
+  border: 1px solid #1DA1F2;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .motivational-widget .help-link:hover {
+  background-color: #1DA1F2;
+  color: #12171D;
+}
+
+.sidebar .post-button {
+  margin-top: auto;
+  background-color: #1DA1F2;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .post-button:hover {
+  background-color: #0d95e8;
+}
+
+/* Main Content */
+.main {
+  padding: 20px;
+  background-color: #12171D;
+  overflow-y: auto;
+}
+
+.tweet-box {
+  background-color: #1C2938;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tweet-box textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #EAEAEA;
+  font-size: 18px;
+  outline: none;
+  resize: none;
+  height: 80px;
+}
+
+.tweet-actions {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.tweet-actions button {
+  background-color: #1DA1F2;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.tweet-actions button:hover {
+  background-color: #0d95e8;
+}
+
+/* Tweets in Feed */
+.feed {
+  margin-top: 20px;
+}
+
+.tweet {
+  background-color: #1C2938;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tweet h4 {
+  font-size: 16px;
+  color: #1DA1F2;
+}
+
+.tweet .stats {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8899A6;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+  background-color: #1C2938;
+  padding: 20px;
+  border-left: 1px solid #2F3D4A;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-sidebar .explore-box {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #1C2938;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.right-sidebar .explore-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #EAEAEA;
+}
+
+.right-sidebar .explore-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.right-sidebar .explore-box ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #EAEAEA;
+}
+
+.right-sidebar .explore-box ul li:hover {
+  color: #1DA1F2;
+}
+
+/* News Section */
+.news-section {
+  padding: 10px;
+  background-color: #1C2938;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.news-section h3 {
+  color: #1DA1F2;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.news-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.news-section ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #EAEAEA;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.news-section ul li:hover {
+  color: #1DA1F2;
+}
+
+/* Causes Section */
+.causes-section {
+  padding: 10px;
+  background-color: #1C2938;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.causes-section h3 {
+  color: #1DA1F2;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.causes-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.causes-section ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #EAEAEA;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.causes-section ul li:hover {
+  color: #1DA1F2;
+}
+
+/* Profile Modal */
+.profile-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.profile-modal-content {
+  background-color: #1C2938;
+  padding: 30px;
+  border-radius: 20px;
+  width: 70%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.profile-modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.profile-modal-content p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.profile-modal-content .close-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.profile-modal-content img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #12171D;
+  color: #EAEAEA;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Recommendations Container */
+.recommendations-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.recommendations-card {
+  background-color: #1C2938;
+  color: #EAEAEA;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.recommendations-card h1 {
+  font-size: 36px;
+  color: #1DA1F2;
+  margin-bottom: 20px;
+}
+
+.recommendations-card p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.recommendations-section {
+  margin: 20px 0;
+}
+
+.recommendations-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #1DA1F2;
+}
+
+.recommendations-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recommendations-section ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #EAEAEA;
+  line-height: 1.8;
+}
+
+/* Helpful Videos Section */
+.videos-section {
+  margin: 20px 0;
+}
+
+.videos-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #1DA1F2;
+}
+
+.video-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.video-links a {
+  text-decoration: none;
+  color: #EAEAEA;
+  text-align: center;
+  width: 30%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.video-links a:hover {
+  transform: scale(1.05);
+}
+
+.video-links a img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.video-links a img:hover {
+  transform: scale(1.1);
+}
+
+.video-links a p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Back to Home Button */
+.back-home-btn {
+  background-color: #1DA1F2;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
+.back-home-btn:hover {
+  background-color: #0d95e8;
+}
+

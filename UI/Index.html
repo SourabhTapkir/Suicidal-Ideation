@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitter UI Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <span>X</span>
+      </div>
+      <ul>
+        <li><button class="sidebar-btn" onclick="location.reload();"><i class="icon-home"></i> Home</button></li>
+        <li><button class="sidebar-btn" onclick="window.location.href='https://twitter.com/explore';"><i class="icon-explore"></i> Explore</button></li>
+        <li><button class="sidebar-btn" onclick="showProfile()"><i class="icon-profile"></i> Profile</button></li>
+      </ul>
+      <div class="motivational-widget">
+        <h4>Daily Motivation</h4>
+        <p>"You are not alone. Your feelings are valid. Take one step at a time."</p>
+        <a href="https://icallhelpline.org/" class="help-link">Visit Help Center</a>
+      </div>
+      <button class="post-button" onclick="postTweet()">Post</button>
+    </div>
+
+    <div class="main">
+      <div class="tweet-box">
+        <textarea id="tweet-box" placeholder="What's happening?!"></textarea>
+        <div class="tweet-actions">
+          <button>Post</button>
+        </div>
+      </div>
+      <div class="feed"></div>
+    </div>
+
+    <div class="right-sidebar">
+      <div class="explore-box">
+        <h3>Explore</h3>
+        <ul>
+          <li>Bigg Boss Telugu 8: Fans Clash Over Contestant Strategies</li>
+          <li>Hardik Pandya Reclaims Top Spot in ICC T20I Rankings</li>
+          <li>Biden Authorizes Mines for Ukraine Amid Escalation</li>
+          <li>Lionel Messi's Return to India: Kerala to Host Argentina</li>
+        </ul>
+      </div>
+
+      <!-- Recent Suicide News Section -->
+      <div class="news-section">
+        <h3>Recent Suicide News</h3>
+        <ul>
+          <li>University Student Found Dead in Campus Dorm</li>
+          <li>Actor Struggles with Mental Health Issues Amidst Tragic News</li>
+          <li>Community Rallies for Awareness After Local Incident</li>
+        </ul>
+      </div>
+
+      <!-- Suicide Causes Section -->
+      <div class="causes-section">
+        <h3>Common Causes</h3>
+        <ul>
+          <li>Mental Health Disorders</li>
+          <li>Financial Stress and Job Loss</li>
+          <li>Social Isolation and Loneliness</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Modal -->
+  <div id="profileModal" class="profile-modal">
+    <div class="profile-modal-content">
+      <span class="close-btn" onclick="closeProfile()">&times;</span>
+      <div class="profile-details">
+        <h2>Sourabh Tapkir</h2>
+        <p><strong>Bio:</strong> Stay Healthy</p>
+        <p><strong>Location:</strong> Pune, India</p>
+        <p><strong>Age:</strong> 21</p>
+        <p><strong>105 Following | 50.4M Followers</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
